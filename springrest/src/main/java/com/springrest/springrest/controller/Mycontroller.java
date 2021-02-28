@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -53,6 +54,16 @@ public class Mycontroller {
 	 
 		return this.courseService.addCourse(course);		
 	}
+	
+	
+	@PutMapping("/courses")
+	public course  updateCourse(@RequestBody course course)
+	{
+	 
+		return this.courseService.updateCourse(course);		
+	}
+	
+	
 	
 	
 	//this is a controller file
